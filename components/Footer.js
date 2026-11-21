@@ -1,4 +1,5 @@
 import { site } from "@/content/site";
+import { assetPath } from "@/lib/paths";
 
 export default function Footer() {
   const socials = [
@@ -16,7 +17,7 @@ export default function Footer() {
         </a>
         <div className="footer__row">
           <div className="footer__brand">
-            <img src="/logo.png" alt="" className="footer__logo" width="298" height="400" />
+            <img src={assetPath("/logo.png")} alt="" className="footer__logo" width="298" height="400" />
             <div>
               <strong>{site.name}</strong>
               <p>{site.address}</p>

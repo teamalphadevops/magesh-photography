@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import { about, site } from "@/content/site";
+import { assetPath } from "@/lib/paths";
 
 export default function About({ image }) {
   return (
@@ -27,7 +28,7 @@ export default function About({ image }) {
                 </textPath>
               </text>
             </svg>
-            <img src="/logo.png" alt="" className="about__badge-icon" width="298" height="400" />
+            <img src={assetPath("/logo.png")} alt="" className="about__badge-icon" width="298" height="400" />
           </div>
         </Reveal>
 

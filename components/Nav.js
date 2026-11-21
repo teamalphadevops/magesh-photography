@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
+import { assetPath } from "@/lib/paths";
 
 const links = [
   { href: "#about", label: "About" },
@@ -30,7 +31,7 @@ export default function Nav() {
     <header className={`nav ${scrolled ? "is-scrolled" : ""} ${open ? "is-open" : ""}`}>
       <div className="nav__inner container">
         <a href="#top" className="nav__logo" onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="Magesh Photography logo" className="nav__logo-img" width="298" height="400" />
+          <img src={assetPath("/logo.png")} alt="Magesh Photography logo" className="nav__logo-img" width="298" height="400" />
           <span className="nav__logo-text">
             Magesh <em>Photography</em>
           </span>

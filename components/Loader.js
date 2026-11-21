@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { assetPath } from "@/lib/paths";
 
 const RING = 2 * Math.PI * 92; // circumference of the progress ring
 
@@ -83,7 +84,7 @@ export default function Loader() {
               strokeDashoffset={RING * (1 - progress / 100)}
             />
           </svg>
-          <img src="/logo.png" alt="" className="loader__logo" width="298" height="400" />
+          <img src={assetPath("/logo.png")} alt="" className="loader__logo" width="298" height="400" />
         </div>
 
         <p className="loader__name">
